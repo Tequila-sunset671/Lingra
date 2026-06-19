@@ -1,0 +1,16 @@
+# Transcription engine (Whisper via CTranslate2). Cross-platform wheels.
+faster-whisper==1.1.1
+# Web interface.
+gradio>=6.0
+requests>=2.31
+# Translation: NLLB-200 on the CTranslate2 engine (already shipped with faster-whisper).
+# transformers is used only for the NLLB tokenizer (no torch — the fast tokenizer
+# from tokenizer.json is enough).
+transformers>=4.40
+# PDF translation with layout preservation.
+PyMuPDF>=1.24
+# Bundled Noto fonts (Latin + Cyrillic) for inserting translated text into PDFs —
+# cross-platform, no system fonts required.
+pymupdf-fonts>=1.0.5
+# Font subsetting so embedded fonts don't bloat the output PDF.
+fonttools>=4.40
